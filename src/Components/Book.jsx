@@ -8,7 +8,7 @@ const BookList = ({ classId }) => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/books/class/${classId}`);
+        const response = await fetch(`https://store-book-x2ww.onrender.com/books/class/${classId}`);
         const result = await response.json();
 
         if (result.success) {

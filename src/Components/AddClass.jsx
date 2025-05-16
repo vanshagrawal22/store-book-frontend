@@ -10,7 +10,7 @@ const AddClass = () => {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await fetch('http://localhost:8080/schools'); //  assumes GET /schools returns all
+        const response = await fetch('https://store-book-x2ww.onrender.com/schools'); //  assumes GET /schools returns all
         const result = await response.json();
 
         if (result.success) {
@@ -37,7 +37,7 @@ const AddClass = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/classes', {
+      const response = await fetch('https://store-book-x2ww.onrender.com/classes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ const Class = ({ selectedSchool }) => {
 
     const fetchClasses = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/classes/${selectedSchool}`);
+        const response = await fetch(`https://store-book-x2ww.onrender.com/classes/${selectedSchool}`);
         const result = await response.json();
 
         if (result.success) {

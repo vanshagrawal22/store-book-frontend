@@ -15,7 +15,7 @@ const AddSchool = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/schools', {
+      const response = await fetch('https://store-book-x2ww.onrender.com/schools', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

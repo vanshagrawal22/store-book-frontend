@@ -14,7 +14,7 @@ const AddBook = () => {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await fetch('http://localhost:8080/schools');
+        const response = await fetch('https://store-book-x2ww.onrender.com/schools');
         const result = await response.json();
         if (result.success) setSchools(result.data);
         else setMessage('Failed to load schools.');
@@ -33,7 +33,7 @@ const AddBook = () => {
 
     const fetchClasses = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/classes/${selectedSchool}`);
+        const response = await fetch(`https://store-book-x2ww.onrender.com/classes/${selectedSchool}`);
         const result = await response.json();
         if (result.success) setClasses(result.data);
         else setMessage('Failed to load classes.');
@@ -55,7 +55,7 @@ const AddBook = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/books', {
+      const response = await fetch('https://store-book-x2ww.onrender.com/books', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

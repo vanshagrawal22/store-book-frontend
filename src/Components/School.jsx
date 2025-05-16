@@ -10,7 +10,7 @@ const School = ({ onSelect }) => {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await fetch('http://localhost:8080/schools'); // Adjust if route is different
+        const response = await fetch('https://store-book-x2ww.onrender.com/schools'); // Adjust if route is different
         const result = await response.json();
 
         if (result.success) {
